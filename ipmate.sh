@@ -25,13 +25,12 @@ bash ipmate.sh
 
 
 elif [ $num -eq 2 ];then
-echo -e "\e[32m Input target IP or Site:"
-read -p ">>" t
-work=$(wget http://api.hackertarget.com/geoip/?q=$t -q -O .-)
-echo "Scan Done"
+echo
+read -p "Enter The Ip or site: " ip
+curl http://ip-api.com/$ip
+echo
+echo -e "\e[34mScan Done"
 echo 
- cat .-
- 
 echo " "
 read -p "Press Enter for Home Menu" enter
 bash ipmate.sh
